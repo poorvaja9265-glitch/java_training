@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int Age,Mark;
+        Age=s.nextInt();
+        Mark=s.nextInt();
+        if(Age>=18&Mark>=40)
+        {
+            System.out.println("Eligible");
+        }
+        else
+        {
+            System.out.println("Not Eligible");
+        }
+    }
+}
+
+
+
