@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+    Scanner s =new Scanner(System.in);
+        String str =s.nextLine();
+        String add =s.nextLine();
+        int start=s.nextInt();
+        int end=s.nextInt();
+        StringBuffer obj =new StringBuffer(str);
+        obj.replace(start,end,add);
+        System.out.println(obj);
+    }
+}
+
+
+
+
+
+
