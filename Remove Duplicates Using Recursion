@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    static String removeDuplicates(String str, String result) {
+        if (str.length() == 0) {
+            return result;
+        }
+
+        char ch = str.charAt(0);
+        if (result.indexOf(ch) == -1) {
+            result += ch;
+        }
+        return removeDuplicates(str.substring(1), result);
+    }
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String str = s.nextLine();
+
+        String output = removeDuplicates(str, "");
+        System.out.println(output);
+    }
+}
