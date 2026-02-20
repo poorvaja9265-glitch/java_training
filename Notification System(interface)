@@ -1,0 +1,34 @@
+import java.util.*;
+interface Notification{
+    void n();
+}
+class Email implements Notification{
+    public void n(){
+    System.out.println("Email notification sent");
+}
+}
+class Sms implements Notification{
+    public void n(){
+    System.out.println("SMS notification sent");
+}
+}
+class Push implements Notification{
+    public void n(){
+    System.out.println("Push notification sent");
+}
+}
+public class main{
+    public static void main(String args[]){
+        Scanner s=new Scanner(System.in);
+        String name=s.next();
+        if(name.equals("Email")){
+            new Email().n();
+        }
+        else if(name.equals("SMS")){
+            new Sms().n();
+        }
+        else{
+            new Push().n();
+        }
+    }
+}
